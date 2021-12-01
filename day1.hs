@@ -10,6 +10,6 @@ sumList :: [Int] -> Int
 sumList [] = 0
 sumlist (x:xs) = x + sumList xs
 
-part1 list = snd $ foldl (\(prev, inc) x -> (x, (inc+) . fromEnum $ x > prev)) ((head list), 0) list
-part2 list = snd $ foldl (\(prevs, inc) x -> ((tail prevs) ++ [x], (inc+) . fromEnum $ ((sum(tail prevs) + x) > (sum prevs)))) (take 3 list, 0) (drop 3 list)
+part1 xs = snd $ foldl (\(prev, inc) x -> (x, (inc+) . fromEnum $ x > prev)) ((head xs), 0) xs
+part2 xs = snd $ foldl (\(prevs, inc) x -> ((tail prevs) ++ [x], (inc+) . fromEnum $ ((sum(tail prevs) + x) > (sum prevs)))) (take 3 xs, 0) (drop 3 xs)
 
