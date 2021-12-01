@@ -11,4 +11,4 @@ part2 xs = snd $ foldl (\(prevs, inc) x -> ((tail prevs) ++ [x], (inc+) . fromEn
 
 
 -- code golfed part 2
-P xs = snd $ foldl (\(p, i) x -> ((tail p) ++ [x], (i+) . fromEnum $ ((sum(tail p) + x) > (sum p)))) (take 3 xs, 0) (drop 3 xs)
+f xs = snd $ foldl (\(p, i) x -> ((tail p) ++ [x], (i+) . fromEnum $ ((sum(tail p) + x) > (sum p)))) (take 3 xs, 0) (drop 3 xs)
