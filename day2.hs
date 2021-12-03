@@ -9,8 +9,6 @@ main = do
   print ((\(a,b,_) -> a * b) ans2)
 
 
-
-
 sndToInt :: [String] -> (String, Int)
 sndToInt [str, n] = (str, read n :: Int)
 sndToInt _ = ("", 0)
